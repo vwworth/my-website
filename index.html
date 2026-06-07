@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Victoria Wordsworth</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+        <h1><a href="#hero"><img src="./assets/icons/vw_logo.png"/></a></h1>
+        <ul class="navigation">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="./Resume Victoria Wordsworth.pdf" download><button type="button">Résumé</button></a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+  <article class="scroll-wrapper">
+ <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Hi there! My name is</h1>
+        <h2>Victoria Wordsworth.</h2>
+        <h3>I'm an IT professional with a passion for user experience.</h3>
+        <hr>
+        <p class="hero-text">
+            I currently help keep Sunshine Coast hospitals running, one deployment at a time.
+        </p>
+      </div>
+      <ion-icon name="chevron-down-outline" class="scroll-hint"></ion-icon>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-content">
+            <img
+            src="assets/images/me.png"
+            alt="A portrait of myself"
+            loading="lazy"
+            class="portrait-img"
+            />
+            <div class="bio">
+            <p class="bio-text">
+                I currently work at eHealth Queensland as an Assistant Deployment Technician, where I set up and deploy replacement computers across hospital environments, minimising disruption to healthcare staff and patients.
+            </p>
+            <p class="bio-text">
+            Before this, I completed my Bachelor of Information Technology at the Queensland University of Technology, Brisbane, majoring in Computer Science with a minor in Mobile Applications. 
+            </p>
+            <p>
+                Through my studies I developed a particular interest in front-end development and UX design, enjoying the process of building experiences that are both functional and intuitive.
+            </p>
+            <p>
+                Technologies/topics that I’ve explored and enjoyed:
+            </p>
+            <div class="technologies">
+                <ul>
+                    <li>C#</li>
+                    <li>HTML/CSS</li>
+                    <li>AI tools & prompting</li>
+                </ul>
+                <ul>
+                    <li>Python/Flask</li>
+                    <li>SQL</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-info" id="more-info">
+            <h3 class="more-info-title">Get to Know Me</h3>
+            <div class="more-info-content">
+                <p><b>Music:</b> I'm an avid vinyl collector and enjoy catching live music whenever I can.</p>
+                <p><b>Traveling:</b> I love exploring — recent highlights include the South Island of New Zealand and a road trip around Tasmania.</p>
+                <p><b>Digital photography:</b> I have been experimenting with my DJI drone and Canon DSLR camera - see some of my recent pics below.</p>
+            </div>
+            <div class="insta-pics">
+                <behold-widget feed-id="qAQ6fKg5sEeU0GBAgUA9"></behold-widget>
+                <script>
+                    (() => {
+                     const d=document,s=d.createElement("script");s.type="module";
+                     s.src="https://w.behold.so/widget.js";d.head.append(s);
+                    })();
+                </script>
+            </div>
+  </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2 class="contact-title">Get In Touch</h2>
+        <p>Feel free to reach out anytime!</p>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="cf7c2bea-846e-4760-9a03-c2fb4d045056">
+
+                <div class="form-control">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="sender-name"
+                    placeholder="Enter your name..."
+                    class="input-field"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="sender-email"
+                    placeholder="Enter your email..."
+                    class="input-field"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    cols="60"
+                    rows="6"
+                    placeholder="Enter your message..."
+                    name="message"
+                    class="input-field"
+                    required
+                  ></textarea>
+                </div>
+                <input
+                  type="submit"
+                  value="Submit"
+                  id="submit-btn"
+                  class="submit-btn"
+                />
+
+              </form>
+            </div>
+          </div>
+  
+            <!-- Footer section -->
+    <footer>
+        <div class="footer-socials">
+          <a href="https://github.com/vwworth" target="_blank"><img src="assets/icons/github.svg" alt="Github" class="socicon"/></a>
+          <a href="http://www.linkedin.com/in/victoria-wordsworth" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn" class="socicon"/></a>
+          <a href="https://www.instagram.com/victoriawordsworthphotography/" target="_blank"><img src="assets/icons/instagram.svg" alt="Instagram" class="socicon"/></a>
+        </div>
+        <p class="copy">&copy; Copyright <span id="year"></span></p>
+        <p class="copy">
+          Built by
+          <a href="http://www.linkedin.com/in/victoria-wordsworth" target="_blank"
+            >Victoria Wordsworth</a
+          >
+        </p>
+  </footer>
+      </section>
+
+    </article>
+
+    <!-- Social accounts - Fixed to the left -->
+    <div class="socials">
+        <a href="https://github.com/vwworth" target="_blank"
+          ><img
+            src="assets/icons/github.svg"
+            alt="Github"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="http://www.linkedin.com/in/victoria-wordsworth" target="_blank"
+          ><img
+            src="assets/icons/linkedin.svg"
+            alt="LinkedIn"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://www.instagram.com/victoriawordsworthphotography/" target="_blank"
+          ><img
+            src="assets/icons/instagram.svg"
+            alt="Instagram"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <div class="vl"></div>
+     </div>   
+
+      <!-- Email account - Fixed to the right -->
+       <div class="email">
+        <a href= "mailto:hello@victoriawordsworth.com">hello@victoriawordsworth.com</a>
+        <div class="vl"></div>
+       </div>
+
+
+
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+        <!-- To clear form on reload -->
+    <script>
+        window.onload = function() {
+            document.getElementById("contact-form").reset();
+        };
+    </script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

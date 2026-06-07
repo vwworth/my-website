@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* ======================================================
+   Variables
+   ====================================================== */
+:root {
+  --font-family: "Kantumruy Pro", sans-serif;
+  --normal-font: 400;
+  --bold-font: 500;
+  --bolder-font: 700;
+  --bg-color: #F7FBF6;
+  --primary-color: #7C996E;
+  --secondary-color: #537544;
+  --transition: 0.3s;
+  --content-max-width: min(90vw, 960px);
+  --section-h-pad: clamp(1.5rem, 8vw, 12vw);
+}
+
+/* ======================================================
+   Reset
+   ====================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* ======================================================
+   Base Layout
+   ====================================================== */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scroll-wrapper {
+  flex: 1;
+  min-height: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem var(--section-h-pad);
+}
+
+/* ======================================================
+   Navbar
+   ====================================================== */
+nav {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2.5rem;
+  margin-top: clamp(1.5rem, 2.5vw, 2.8rem);
+  background-color: var(--bg-color);
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+  font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+}
+
+nav ul li button {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 2.5px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 6px 18px;
+  font-family: var(--font-family);
+  font-weight: var(--bold-font);
+  font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+nav ul li button:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+nav h1 img {
+  width: clamp(52px, 7vw, 90px);
+  display: block;
+  border: 3px solid #A7BB9D;
+  transition: var(--transition);
+}
+
+nav h1 img:hover {
+  border-color: var(--secondary-color);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* ======================================================
+   Shared: decorative section titles
+   ====================================================== */
+.about-title,
+.more-info-title,
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: var(--content-max-width);
+  color: var(--secondary-color);
+  margin-bottom: 1.75rem;
+}
+
+.about-title    { font-size: clamp(1.6rem, 3.5vw, 2.8rem); }
+.more-info-title { font-size: clamp(1.3rem, 2.5vw, 2rem); }
+.contact-title  { font-size: clamp(1.6rem, 3.5vw, 2.8rem); }
+
+.about-title::before,
+.about-title::after,
+.more-info-title::before,
+.more-info-title::after,
+.contact-title::before,
+.contact-title::after {
+  content: "";
+  flex: 0 0 clamp(40px, 7vw, 130px);
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+/* ======================================================
+   Hero Section
+   ====================================================== */
+.hero {
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: var(--content-max-width);
+  color: var(--primary-color);
+}
+
+.hero h1 {
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  padding-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 4.8rem);
+  color: var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.hero h3 {
+  font-weight: 600;
+  font-size: clamp(1.1rem, 3.2vw, 2.6rem);
+  padding-bottom: 1.5rem;
+}
+
+.hero hr {
+  width: 12%;
+  border: none;
+  border-top: 1.5px solid var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* ======================================================
+   Section entrance animations
+   ====================================================== */
+section > *,
+section .hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible > *,
+section.visible .hero-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section > *:nth-child(2) { transition-delay: 0.1s; }
+section > *:nth-child(3) { transition-delay: 0.2s; }
+section > *:nth-child(4) { transition-delay: 0.3s; }
+section > *:nth-child(5) { transition-delay: 0.4s; }
+
+/* ======================================================
+   Scroll hint chevron
+   ====================================================== */
+.scroll-hint {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--primary-color);
+  opacity: 0.5;
+  animation: bob 3s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(4px); }
+}
+
+/* ======================================================
+   About Section
+   ====================================================== */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: var(--content-max-width);
+  color: var(--primary-color);
+}
+
+.portrait-img {
+  width: clamp(130px, 20vw, 250px);
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.bio {
+  flex: 1;
+}
+
+.bio p {
+  line-height: 1.9;
+  padding: 0.3rem 0;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  text-align: justify;
+}
+
+.technologies {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1rem;
+}
+
+.technologies ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+.technologies li {
+  padding: 0.25rem 0;
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+}
+
+/* ======================================================
+   More Info Section
+   ====================================================== */
+.more-info-content {
+  width: 100%;
+  max-width: var(--content-max-width);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.more-info-content p {
+  line-height: 1.9;
+  padding: 0.3rem 0;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  text-align: justify;
+}
+
+.insta-pics {
+  width: 100%;
+  max-width: var(--content-max-width);
+}
+
+/* ======================================================
+   Contact Section
+   ====================================================== */
+.contact > p {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 560px;
+  padding: 0 0.5rem;
+}
+
+.contact-form-container label {
+  display: block;
+  line-height: 2.4em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  resize: vertical;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding: 10px 1rem;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1.5px solid var(--primary-color);
+  font-size: 0.9rem;
+  outline: none;
+  background-color: var(--bg-color);
+}
+
+.contact-form-container .input-field:focus {
+  border: 2px solid var(--secondary-color);
+}
+
+.input-field::placeholder {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 500;
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0.75rem auto 1rem;
+  padding: 8px 2rem;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 2.5px solid var(--primary-color);
+  border-radius: 10px;
+  font-family: var(--font-family);
+  font-weight: var(--bold-font);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* ======================================================
+   Contact Success Page
+   ====================================================== */
+.contact-success {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.contact-success h4 {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+
+.contact-success p {
+  line-height: 1.8;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  color: var(--primary-color);
+}
+
+.contact-success .back-home {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.contact-success .back-home:hover {
+  font-weight: 600;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* ======================================================
+   Footer
+   ====================================================== */
+footer {
+  background-color: var(--bg-color);
+  padding: 0.75rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: clamp(0.7rem, 1vw, 0.875rem);
+}
+
+/* ======================================================
+   Footer socials (shown only on small screens)
+   ====================================================== */
+.footer-socials {
+  display: none;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-socials .socicon {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+/* ======================================================
+   Fixed sidebars — socials & email
+   ====================================================== */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  left: 2%;
+  bottom: 10%;
+  z-index: 50;
+}
+
+.socials .vl {
+  border-left: 2px solid var(--primary-color);
+  height: 4rem;
+  position: fixed;
+  margin-left: -1px;
+  bottom: 0;
+}
+
+.socicon {
+  width: clamp(18px, 1.8vw, 26px);
+  height: clamp(18px, 1.8vw, 26px);
+  margin-top: 0.75rem;
+}
+
+.socicon:hover {
+  transform: translateY(-3px);
+  filter: brightness(0.68);
+}
+
+.email {
+  position: fixed;
+  right: 2%;
+  bottom: 10%;
+  writing-mode: vertical-lr;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: clamp(0.65rem, 0.9vw, 0.85rem);
+  z-index: 50;
+}
+
+.email .vl {
+  border-left: 2px solid var(--primary-color);
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+  margin-left: 6px;
+}
+
+.email a:hover {
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   Tablet  ≤ 1024px
+   ====================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --section-h-pad: clamp(1.5rem, 4vw, 5vw);
+  }
+
+  .socials,
+  .email {
+    display: none;
+  }
+
+  .footer-socials {
+    display: flex;
+  }
+}
+
+/* ======================================================
+   Mobile  ≤ 768px
+   ====================================================== */
+@media (max-width: 768px) {
+  /* Disable snap + full-height sections — let content flow naturally */
+  body {
+    overflow: auto;
+  }
+
+  .scroll-wrapper {
+    scroll-snap-type: none;
+    overflow: visible;
+  }
+
+  section {
+    min-height: auto;
+    scroll-snap-align: none;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* Slide-down mobile menu */
+  nav ul.navigation {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    z-index: 200;
+  }
+
+  nav ul.navigation.open {
+    display: flex;
+  }
+
+  nav ul li {
+    font-size: 1rem;
+  }
+
+  nav ul li button {
+    font-size: 1rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  section {
+    padding: 3rem 1.25rem;
+  }
+
+  .hero {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .portrait-img {
+    width: clamp(120px, 50vw, 180px);
+  }
+
+  .bio p,
+  .technologies li,
+  .more-info-content p {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 8px 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* ======================================================
+   Small phones  ≤ 480px
+   ====================================================== */
+@media (max-width: 480px) {
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero h2 { font-size: 1.8rem; }
+  .hero h3 { font-size: 1.1rem; }
+
+  nav h1 img {
+    width: 46px;
+  }
+}
