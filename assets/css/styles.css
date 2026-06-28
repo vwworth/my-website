@@ -91,7 +91,7 @@ nav {
   background-color: var(--bg-color);
 }
 
-nav h1 {
+nav .nav-logo {
   color: var(--primary-color);
 }
 
@@ -134,14 +134,14 @@ nav ul li button:hover {
   border-color: var(--secondary-color);
 }
 
-nav h1 img {
+nav .nav-logo img {
   width: clamp(52px, 7vw, 90px);
   display: block;
   border: 3px solid #A7BB9D;
   transition: var(--transition);
 }
 
-nav h1 img:hover {
+nav .nav-logo img:hover {
   border-color: var(--secondary-color);
 }
 
@@ -676,7 +676,7 @@ footer {
   .hero h2 { font-size: 1.8rem; }
   .hero h3 { font-size: 1.1rem; }
 
-  nav h1 img {
+  nav .nav-logo img {
     width: 46px;
   }
 }

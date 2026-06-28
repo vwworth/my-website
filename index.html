@@ -41,7 +41,7 @@
   <body>
     <!-- Navbar -->
     <nav>
-        <h1><a href="#hero"><img src="./assets/icons/vw_logo.png"/></a></h1>
+        <div class="nav-logo"><a href="#hero"><img src="./assets/icons/vw_logo.png"/></a></div>
         <ul class="navigation">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -73,7 +73,7 @@
         <div class="about-content">
             <img
             src="assets/images/me.png"
-            alt="A portrait of myself"
+            alt="Portrait of Victoria Wordsworth, IT professional based on the Sunshine Coast"
             loading="lazy"
             class="portrait-img"
             />
@@ -232,6 +232,36 @@
 
 
 
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Victoria Wordsworth",
+      "url": "https://victoriawordsworth.com",
+      "email": "hello@victoriawordsworth.com",
+      "jobTitle": "IT Professional",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "eHealth Queensland"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Queensland University of Technology"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Sunshine Coast",
+        "addressCountry": "AU"
+      },
+      "sameAs": [
+        "https://github.com/vwworth",
+        "https://www.linkedin.com/in/victoria-wordsworth",
+        "https://www.instagram.com/victoriawordsworthphotography/"
+      ]
+    }
+    </script>
 
     <!-- Website scripts -->
     <script src="assets/js/app.js"></script>
