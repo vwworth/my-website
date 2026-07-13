@@ -7,7 +7,6 @@ Source code for my personal website at [victoriawordsworth.com](https://victoria
 - Plain HTML, CSS, and JavaScript — no build step
 - [Web3Forms](https://web3forms.com) for contact form submissions
 - [Behold](https://behold.so) widget for Instagram feed
-- [Ionicons](https://ionic.io/ionicons) for icons
 - Hosted on GitHub Pages
 
 ## Running locally
